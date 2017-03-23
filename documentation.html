@@ -13,9 +13,7 @@
 			h4 {
 				margin-top: 25px;
 			}
-			h5 {
-				margin-top: 15px;
-			}
+			
 			.nav-inner {
 				margin-left: 10px;
 			}
@@ -318,14 +316,14 @@
 							Это вариант, поскольку узлы на базе Windows позволяют добавлять статические записи в ARP кэш. 
 							<br>
 							Просматривать ARP кэш узла Windows можно, если открыть командную строку и ввести следующую команду:
-							<pre><ul><li><code>arp -a.<code></li></ul></pre>
+							<pre><ul><li><code>arp -a.</code></li></ul></pre>
 							Можно добавлять записи в этот список, используя команду:
-							<pre><ul><li><code>arp –s  <IP ADDRESS> <MAC ADDRESS>.<code></li></ul></pre>
+							<pre><ul><li><code>arp –s  <IP ADDRESS> <MAC ADDRESS>.</code></li></ul></pre>
 							В ситуациях, когда конфигурация локальной сети не часто меняется, можно создать статические записи ARP. 
 							После этого устройства всегда будут полагаться на свой локальный ARP кэш, а не на ARP запросы и ответы.
 							<br>
 							Однако, при выполнении команды arp –s  <IP ADDRESS> <MAC ADDRESS> может быть отказано в доступе, поэтому лучше пользоваться следующей командой:
-							<pre><ul><li><code>netsh interface ipv4 add neighbors “Network Name” “IP ADDRESS” “MAC ADDRESS”.<code></li></ul></pre>
+							<pre><ul><li><code>netsh interface ipv4 add neighbors “Network Name” “IP ADDRESS” “MAC ADDRESS”.</code></li></ul></pre>
 							Имя сети можно посмотреть в «Центре управления сетями и общим доступом» в подменю «Изменение параметров адаптера».
 						</p>
 						<p>
