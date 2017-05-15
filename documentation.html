@@ -160,7 +160,7 @@
 								An Ethernet Address Resolution Protocol)'. Процесс ARP-взаимодействия представлен на рисунке 4.
 								
 								<figure class="img">
-									<img alt="ARP Communication Proccess" src="img/arp_communications_proccess.png" height="50%" width="50%">
+									<img alt="ARP Communication Proccess" src="img/arp_communications_proccess.png" height="60%" width="60%">
 									<figcaption>Рис.4 Процесс ARP-взаимодействия</figcaption>
 								</figure>
 							</p>
@@ -186,7 +186,7 @@
 								взломщика. Отравление ARP-кэша представлено на рисунке 5.
 								
 								<figure class="img">
-									<img alt="ARP Cache Poisoning" src="img/arp_cache_poisoning.png" height="50%" width="50%">
+									<img alt="ARP Cache Poisoning" src="img/arp_cache_poisoning.png" height="60%" width="60%">
 									<figcaption>Рис.5 Процесс ARP-взаимодействия</figcaption>
 								</figure>
 							</p>
@@ -213,7 +213,7 @@
 								организациях и интернете может быть сложной. На самом деле, есть целые книги, посвященные архитектуре DNS. 
 								Рассмотрим основу DNS взаимодействия, которая показана на рисунке 6.
 								<figure class="img">
-									<img alt="dns_query_response" src="img/dns_query_response.png" height="80%" width="80%">
+									<img alt="dns_query_response" src="img/dns_query_response.png" height="70%" width="70%">
 									<figcaption>Рис.6 DNS-запрос и ответ</figcaption>
 								</figure>
 								DNS функционирует в формате запрос/ответ. Клиент, желающий преобразовать DNS-имя в IP-адрес, отправляет запрос 
@@ -232,7 +232,7 @@
 								собственно поддельный пакет. Здесь нужно заставить пользователя целевого компьютера посетить вредоносный сайт, 
 								а не тот сайт, к которому пользователь изначально хотел получить доступ. Эта атака показана на рисунке 7.
 								<figure class="img">
-									<img alt="dns_spoofing" src="img/dns_spoofing.png" height="80%" width="80%">
+									<img alt="dns_spoofing" src="img/dns_spoofing.png" height="70%" width="70%">
 									<figcaption>Рис.7 Атака DNS-spoofing</figcaption>
 								</figure>
 							</p>
@@ -257,7 +257,7 @@
 								клиентом и доверенной третьей стороной. Допустим, пользователь пытается подключиться к учетной записи на Gmail. Это включает несколько 
 								четких шагов, которые в упрощенном виде показаны на рисунке 8.
 								<figure class="img">
-									<img alt="https_communications" src="img/https_communications.png" height="80%" width="80%">
+									<img alt="https_communications" src="img/https_communications.png" height="70%" width="70%">
 									<figcaption>Рис.8 HTTPS взаимодействие</figcaption>
 								</figure>
 								Данный процесс, изображенный на рисунке 8, работает по следующему принципу:
@@ -284,7 +284,7 @@
 								до того, как оно будет создано. Чтобы этого добиться, Moxie создал инструмент SSLstrip. Принцип его работы приведен на рисунке 9.
 								
 								<figure class="img">
-									<img alt="https_hijacking_communications" src="img/https_hijacking_communications.png" height="80%" width="80%">
+									<img alt="https_hijacking_communications" src="img/https_hijacking_communications.png" height="70%" width="70%">
 									<figcaption>Рис.9 Подмена HTTPS взаимодействия</figcaption>
 								</figure>
 								<ul>
@@ -314,7 +314,7 @@
 								в котором должны быть настройки прокси. Работа протокола WPAD представлена на рисунке 10.
 
 								<figure class="img">
-									<img alt="wpad" src="img/wpad.png" height="80%" width="80%">
+									<img alt="wpad" src="img/wpad.png" height="70%" width="70%">
 									<figcaption>Рис.10 Работа протокола WPAD</figcaption>
 								</figure>
 								<br>
@@ -326,7 +326,7 @@
 								точке доступа, сконфигурированной должным образом. Сценарий атаки с использованием DNS-сервера представлен на рисунке 11.
 								
 								<figure class="img">
-									<img alt="wpad_mitm" src="img/wpad_mitm.png" height="80%" width="80%">
+									<img alt="wpad_mitm" src="img/wpad_mitm.png" height="70%" width="70%">
 									<figcaption>Рис.11 Сценарий атаки с использованием DNS-сервера</figcaption>
 								</figure>
 							</p>
@@ -343,7 +343,7 @@
 							 на одной стороне с одним ключом и снова зашифровать с другой - для ретрансляции). Конечно, он может читать 
 							 все данные и незаметно изменить их. Сценарий атаки представлен на рисунке 12.
 								<figure class="img">
-									<img alt="ssh_mitm" src="img/ssh_mitm.png" height="75%" width="75%">
+									<img alt="ssh_mitm" src="img/ssh_mitm.png" height="70%" width="70%">
 									<figcaption>Рис.12 Сценарий атаки SSH MITM</figcaption>
 								</figure>
 							Злоумышленник получает данные авторизации пользователя и записывает в лог весь сеанс связи, запуски команд и 
@@ -448,6 +448,7 @@
 							</p>
 							
 							<p>
+							    <h4>Уязвимость протокола DNS</h4>
 								DNS функционирует в формате запрос/ответ. Клиент, желающий преобразовать DNS-имя в IP-адрес, отправляет запрос на DNS-сервер, 
 								а сервер отправляет запрошенную информацию в своем ответе. С точки зрения клиентов единственными двумя пакетами являются эти 
 								запрос и ответ.
