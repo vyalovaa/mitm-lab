@@ -95,6 +95,11 @@
 							Для успешного проведения лабораторной работы необходимо 3 компьютера с ОС Microsoft Windows 7. 
 							Одна машина будет злоумышленником; вторая – жертвой с установленным клиентом SSH, например Putty; третья – сервером ssh, например Copssh, 
 							для демонстрации атаки типа «Человек посередине» на протокол SSH. На машине злоумышленника должен быть инстумент Intercepter-NG.
+							Схема лабораторного стенда представлена на рисунке 1.
+							<figure class="img">
+								<img alt="scheme_0f_stend" src="img/scheme_0f_stend.png" height="80%" width="80%">
+								<figcaption>Рис.1 Приложение песочницы - сервер</figcaption>
+							</figure>
 							<br>
 							Также на машине жертвы должна быть установлена автономная песочница(клиентская часть), а на 3й машине серверная часть песочницы, 
 							для осуществления анализа поведения пользователей.
@@ -126,14 +131,14 @@
 							<br>
 							На 2й машине (жертвы) необходимо запустить <i>sandbox_client</i> ("..\Sandbox Client\Client_v2_tcp\Client_v2_tcp\bin\Debug\Client_v2_tcp.exe") и подключиться к <i>sandbox_server</i>.
 							<br>
-							Песочница представлена на риснках 1 и 2.
+							Песочница представлена на риснках 2 и 3.
 							<figure class="img">
-								<img alt="песочница сервер" src="img/sandbox_server.jpg" height="80%" width="80%">
-								<figcaption>Рис.1 Приложение песочницы - сервер</figcaption>
+								<img alt="песочница сервер" src="img/sandbox_server.jpg" height="60%" width="60%">
+								<figcaption>Рис.2 Приложение песочницы - сервер</figcaption>
 							</figure>
 							<figure class="img">
-								<img alt="песочница клиент" src="img/sandbox_client.jpg" height="80%" width="80%">
-								<figcaption>Рис.2 Приложение песочницы - клиент</figcaption>
+								<img alt="песочница клиент" src="img/sandbox_client.jpg" height="70%" width="70%">
+								<figcaption>Рис.3 Приложение песочницы - клиент</figcaption>
 							</figure>
 						</p>
 						
@@ -144,10 +149,7 @@
 							После запуска Intercepter-NG атакующий оказывается в основном режиме сканирования. Чтобы произвести сканирование, 
 							атакующий делает клик правой кнопкой мыши по пустому полю и выбирает позицию «Smart scan», перед этим выбрав свой сетевой интерфейс.
 						</p>
-						<p>
-							После запуска <strong>Intercepter-NG</strong> атакующий оказывается в основном режиме сканирования. Чтобы произвести сканирование, 
-							атакующий делает клик правой кнопкой мыши по пустому полю и выбирает позицию «Smart scan», перед этим выбрав свой сетевой интерфейс.
-						</p>
+
 						<p>
 							После сканирования нужно добавить  хост/хосты как цель атаки. Для этого, выбрав хост, нужно кликнуть правой кнопкой мыши по нему и выбрать позицию 
 							«Add as Target» и затем перейти в режим MitM для выбора настроек атаки и выбрать позицию SSL MITM. После выбора настроек можно запускать атаку, 
@@ -156,11 +158,11 @@
 						<p>						
 							Когда атака начата, перейдите за машину жертвы и попробуйте авторизоваться на нескольких ресурсах, 
 							а затем посмотрите режим Password mode. Там должны отобразиться логин и пароль, что является признаком успешной атаки.
-							Пример работы представлен на рисунке 3.
+							Пример работы представлен на рисунке 4.
 						</p>
 						<figure class="img">
-								<img alt="ssl_mitm" src="img/ssl_mitm.jpg" height="80%" width="80%">
-								<figcaption>Рис.3 Авторизация на форуме cyberforum</figcaption>
+								<img alt="ssl_mitm" src="img/ssl_mitm.jpg" height="100%" width="100%">
+								<figcaption>Рис.4 Авторизация на форуме cyberforum</figcaption>
 						</figure>
 						
 						<h4 id="task-3">Задание 3</h4>
@@ -171,16 +173,16 @@
 							.jpg или manual.doc. В Content-Type соответствующий тип данных, в Count количество производимых замен, в User-Agent можно указать конкретный UA для целевого применения. 
 							При нажатии кнопки Add будет предложено выбрать файл, которым будет заменен запрашиваемый файл согласно шаблону. Если в Pattern ввести .jpg, 
 							то при запросе GET /photo.jpg картинка будет заменена той, что была выбрана пользователем. Дальше запустить сканирование, нажав кнопку «Play», и 
-							нажать кнопку Радиация, для запуска ARP Poison. Результат работы атаки можно посмотреть на рисунках 4 и 5.
+							нажать кнопку Радиация, для запуска ARP Poison. Результат работы атаки можно посмотреть на рисунках 5 и 6.
 						</p>
 						
 						<figure class="img">
 								<img alt="ssl_strip_http_injection_1" src="img/ssl_strip_http_injection_1.jpg" height="80%" width="80%">
-								<figcaption>Рис.4 Подмена картинки на машине жертвы</figcaption>
+								<figcaption>Рис.5 Подмена картинки на машине жертвы</figcaption>
 						</figure>
 						<figure class="img">
 								<img alt="ssl_strip_http_injection_2" src="img/ssl_strip_http_injection_2.jpg" height="80%" width="80%">
-								<figcaption>Рис.5 Intercepter во время подмены картинки</figcaption>
+								<figcaption>Рис.6 Intercepter во время подмены картинки</figcaption>
 						</figure>
 						
 						<h4 id="task-4">Задание 4</h4>
@@ -188,28 +190,28 @@
 							Для начала атаки «WPAD MitM» нужно перезапустить Intercepter-NG, заново выбрать интерфейс, произвести сканирование, добавить цель и в поле «MitM Options» 
 							необходимо выбрать позицию «wpad mitm» и в глобальных настройках выбрать позицию «Built-in Proxy» и запустить сканирование, нажав кнопку «Play», 
 							и нажать кнопку «Start/stop NAT». Для этой атаки ARP Poison не требуется, так как Intercepter-NG станет прокси сервером. 
-							Результат работы атаки можно посмотреть на рисунках 6 и 7.
+							Результат работы атаки можно посмотреть на рисунках 7 и 8.
 						</p>
 						
 						<figure class="img">
-								<img alt="wpad_1" src="img/wpad1.jpg" height="80%" width="80%">
-								<figcaption>Рис.6 Intercepter во время атаки wpad №1</figcaption>
+								<img alt="wpad_1" src="img/wpad1.jpg" height="90%" width="90%">
+								<figcaption>Рис.7 Intercepter во время атаки wpad №1</figcaption>
 						</figure>
 						<figure class="img">
-								<img alt="wpad_2" src="img/wpad2.jpg" height="80%" width="80%">
-								<figcaption>Рис.7 Intercepter во время атаки wpad №2</figcaption>
+								<img alt="wpad_2" src="img/wpad2.jpg" height="90%" width="90%">
+								<figcaption>Рис.8 Intercepter во время атаки wpad №2</figcaption>
 						</figure>
 						
 						<h4 id="task-5">Задание 5</h4>
 						<p>
 							Для начала атаки «SSH MitM» нужно перезапустить Intercepter-NG, заново выбрать интерфейс, произвести сканирование, добавить цель 
 							и в поле «MitM Options» необходимо выбрать позицию «SSH MitM» и «SSL Strip» и запустить сканирование, нажав кнопку «Play», и нажать кнопку «Радиация», 
-							для запуска ARP Poison. Результат работы атаки можно посмотреть на рисунке 8.
+							для запуска ARP Poison. Результат работы атаки можно посмотреть на рисунке 9.
 						</p>
 						
 						<figure class="img">
-								<img alt="ssh" src="img/ssh.jpg" height="80%" width="80%">
-								<figcaption>Рис.8 Атака на протокол SSH</figcaption>
+								<img alt="ssh" src="img/ssh.jpg" height="90%" width="90%">
+								<figcaption>Рис.9 Атака на протокол SSH</figcaption>
 						</figure>
 						
 						<h4 id="task-6">Задание 6</h4>
@@ -217,16 +219,16 @@
 							Для начала атаки «Traffic Changer» нужно перезапустить Intercepter-NG, заново выбрать интерфейс, произвести сканирование, добавить цель 
 							и в режиме «MitM Mode» необходимо зайти в меню «Traffic Changer» и ввести данные одинаковой длины, которые будут подменены, например, 
 							злоумышленник хочет подменить слово «news» на «swen». После ввода траффика подлежащего замене нужно выбрать опцию «SSL Strip» и запустить сканирование, 
-							нажав кнопку «Play», и нажать кнопку «Радиация», для запуска ARP Poison. Результат работы атаки можно посмотреть на рисунках 9 и 10.
+							нажав кнопку «Play», и нажать кнопку «Радиация», для запуска ARP Poison. Результат работы атаки можно посмотреть на рисунках 10 и 11.
 						</p>
 						
 						<figure class="img">
 								<img alt="traffic_changer1" src="img/traffic_changer1.jpg" height="80%" width="80%">
-								<figcaption>Рис.9 Результат работы Intercepter-NG во время атаки Traffic Changer №1</figcaption>
+								<figcaption>Рис.10 Результат работы Intercepter-NG во время атаки Traffic Changer №1</figcaption>
 						</figure>
 						<figure class="img">
 								<img alt="traffic_changer2" src="img/traffic_changer2.jpg" height="80%" width="80%">
-								<figcaption>Рис.10 Результат работы Intercepter-NG во время атаки Traffic Changer №2</figcaption>
+								<figcaption>Рис.11 Результат работы Intercepter-NG во время атаки Traffic Changer №2</figcaption>
 						</figure>
 						
 						<h4 id="task-7">Задание 7</h4>
@@ -235,16 +237,16 @@
 							в режиме «MitM Mode» необходимо зайти в меню «FATE» и сделать шаблон страницы, с которой атакующий будет получать данные от жертвы, например, 
 							шаблон страницы авторизации форума «4pda.ru/forum» и затем указать поддельное доменное имя, например, «44pda.ru», и выбрать галочку «Enable». 
 							После этого нужно выбрать опцию «SSL Strip» и запустить сканирование, нажав кнопку «Play», и нажать кнопку «Радиация», для запуска ARP Poison. 
-							Результат работы атаки можно посмотреть на рисунках 11 и 12.
+							Результат работы атаки можно посмотреть на рисунках 12 и 13.
 						</p>
 						
 						<figure class="img">
 								<img alt="fake_site_1" src="img/fake_site_1.jpg" height="80%" width="80%">
-								<figcaption>Рис.11 Результат работы Intercepter-NG во время атаки FAke_siTE №1</figcaption>
+								<figcaption>Рис.12 Результат работы Intercepter-NG во время атаки FAke_siTE №1</figcaption>
 						</figure>
 						<figure class="img">
 								<img alt="fake_site_2" src="img/fake_site_2.jpg" height="80%" width="80%">
-								<figcaption>Рис.12 Результат работы Intercepter-NG во время атаки FAke_siTE №2</figcaption>
+								<figcaption>Рис.13 Результат работы Intercepter-NG во время атаки FAke_siTE №2</figcaption>
 						</figure>
 						
 						<h4 id="task-8">Задание 8</h4>
@@ -255,12 +257,12 @@
 							Для начала атаки «FAke updaTE» нужно перезапустить Intercepter-NG, заново выбрать интерфейс, произвести сканирование, добавить цель и, 
 							в режиме «MitM Mode» необходимо зайти в меню «FATE» и выбрать галочку «Enable». После этого нужно выбрать опцию «SSL Strip» и запустить сканирование, 
 							нажав кнопку «Play», и нажать кнопку «Радиация», для запуска ARP Poison. После запуска обновления BSPlayer будет получен shell доступ к машине жертвы. 
-							Результат работы атаки можно посмотреть на рисунке 13.
+							Результат работы атаки можно посмотреть на рисунке 14.
 						</p>
 						
 						<figure class="img">
-								<img alt="fake_update" src="img/fake_update.jpg" height="80%" width="80%">
-								<figcaption>Рис.13 Результат работы Intercepter-NG во время атаки FAke updaTE</figcaption>
+								<img alt="fake_update" src="img/fake_update.jpg" height="100%" width="100%">
+								<figcaption>Рис.14 Результат работы Intercepter-NG во время атаки FAke updaTE</figcaption>
 						</figure>
 
 						<h4 id="task-9">Задание 9</h4>
